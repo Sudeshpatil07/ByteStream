@@ -11,28 +11,23 @@ const SignUpPage = () => {
     password: "",
   });
   const queryClient = useQueryClient();
-//Mutation
+  //Mutation
   const {
     mutate: signupMutation,
     isPending,
     error,
   } = useMutation({
     mutationFn: signup,
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["authUser"] }), 
-  }); 
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["authUser"] }),
+  });
   //invalidateQueries in React Query (TanStack Query) is used to manually tell React Query to refetch specific data.
-  // The basic info: 
+  // The basic info:
   //When you mutate data (e.g., create, update, or delete something), the cached data might become outdated.
   //So, to make sure your UI is showing the latest info, you use invalidateQueries to refetch that data.
   //why we should have to useMutation insted of the axios
   //because     1.Automatically tracks isPending, isSuccess, isError
   //            2.Easily handles side effects (onSuccess, onError)
   //            3.Works with cache updates (invalidateQueries, etc.)
-
-
-
-
-  
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -53,7 +48,7 @@ const SignUpPage = () => {
           <div className="mb-4 flex items-center justify-start gap-2">
             <ShipWheelIcon className="size-9 text-primary" />
             <span className="text-3xl font-bold font-mono  bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wider">
-              ByteStream 
+              ByteStream
             </span>
           </div>
           {/* Error in the signup page*/}
@@ -69,7 +64,7 @@ const SignUpPage = () => {
                 <div>
                   <h2 className="text-xl font-semibold"> Create an Account</h2>
                   <p className="text-sm opacity-70">
-                    Join ByteStream  and start your language learning adventure!
+                    Join ByteStream and start your language learning adventure!
                   </p>
                 </div>
                 <div className="space-y-3">
@@ -184,7 +179,7 @@ const SignUpPage = () => {
             {/* Illustration */}
             <div className="relative aspect-square max-w-sm mx-auto">
               <img
-                src="/i.png"
+                src="/animation.gif"
                 alt="Language connection illustration"
                 className="w-full h-full"
               />
