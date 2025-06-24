@@ -16,6 +16,10 @@ const OnboardingPage = () => {
   const { authUser } = useAuthUser();
   const queryClient = useQueryClient();
 
+
+
+  
+
   //formState holds the current values of the form.
   //setFormState updates them when user types.
 
@@ -34,9 +38,9 @@ const OnboardingPage = () => {
       toast.success("Profile onboarded Successfully");
       queryClient.invalidateQueries({ queryKey: ["authUser"] });
     },
-    onError: (error) => {
-      toast.error(error.response.data.message);
-    },
+    onError:(error)=>{
+      toast.error(error.response.data.message)
+    }
   });
   // useMutation:Sends form data to backend
   const handleSubmit = (e) => {
