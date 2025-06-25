@@ -11,6 +11,7 @@ import PageLoader from "./components/PageLoader.jsx";
 import useAuthUser from "./hooks/useAuthUser.js";
 import Layout from "./components/Layout.jsx";
 import { useThemeStore } from "./Store/useThemeStore.js";
+import FriendsPage from "./pages/Friendspage.jsx";
 
 const App = () => {
   //tenstack
@@ -109,7 +110,7 @@ const App = () => {
             isAuthenticated ? (
               isOnboarded ? (
                 <Layout showSidebar={true}>
-                  <FriendsPage />
+                  <FriendsPage/>
                 </Layout>
               ) : (
                 <Navigate to="/onboarding" />
