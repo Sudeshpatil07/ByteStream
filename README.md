@@ -12,7 +12,7 @@ A full-stack web application built with the **MERN stack** (MongoDB, Express, Re
 
 ## 🚀 Live Demo
 
-🌐 **Hosted on Render**: [Visit the App](https://streamify-video-calls-3p2q.onrender.com/)  
+🌐 **Hosted on Render**: [Visit the App](https://bytestream-xgtp.onrender.com)  
 🔑 You can sign up or use a test account.
 
 ---
